@@ -22,6 +22,7 @@
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		HtmlOutputter.h
  * @version 	1.0.0 18-Jul-13
+ * @version		1.1.0 25-Jul-13
  * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * @see			http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
  */
@@ -73,6 +74,16 @@ class HtmlOutputter : public CppUnit::Outputter
 		void setTitle(const std::string title)
 		{
 			this->_title = title;
+		}
+		
+		/**
+		 * Assigns path to the external stylesheet.
+		 *
+		 * @param path - string including path to the external stylesheet
+		 */
+		void setStylesheetPath(const std::string path)
+		{
+			this->_pathStylesheet = path;
 		}
 		
 	protected:	
@@ -149,6 +160,11 @@ class HtmlOutputter : public CppUnit::Outputter
 		 * Stores string including title for the output HTML file.
 		 */
 		std::string _title;
+		
+		/**
+		 * Stores path to a custome Stylesheet file.
+		 */
+		std::string _pathStylesheet;
 };
 
 #endif

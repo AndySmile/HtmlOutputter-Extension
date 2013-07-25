@@ -22,6 +22,7 @@
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		HtmlOutputter.cpp
  * @version 	1.0.0 18-Jul-13
+ * @version		1.1.0 25-Jul-13
  * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * @see			http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
  */
@@ -38,7 +39,8 @@
 HtmlOutputter::HtmlOutputter(CppUnit::TestResultCollector* result, std::ostream &stream) :
 	_result(result),
 	_stream(stream),
-	_title("CppUnit HTML Outputter")
+	_title("CppUnit HTML Outputter"),
+	_pathStylesheet("")
 {
 }
 
@@ -52,7 +54,8 @@ HtmlOutputter::HtmlOutputter(CppUnit::TestResultCollector* result, std::ostream 
 HtmlOutputter::HtmlOutputter(CppUnit::TestResultCollector* result, std::ostream &stream, const std::string title) :
 	_result(result),
 	_stream(stream),
-	_title(title)
+	_title(title),
+	_pathStylesheet("")
 {
 }
 
@@ -64,7 +67,8 @@ HtmlOutputter::HtmlOutputter(CppUnit::TestResultCollector* result, std::ostream 
 HtmlOutputter::HtmlOutputter(const HtmlOutputter &src) :
 	_result(NULL),
 	_stream(src._stream),
-	_title(src._title)
+	_title(src._title),
+	_pathStylesheet(src._pathStylesheet)
 {
 }
 
@@ -104,12 +108,21 @@ void HtmlOutputter::_writeHeader(void)
 	this->_stream << "<html>\n";
 	this->_stream << "\t<head>\n";
 	this->_stream << "\t\t<title>" << this->_title << "</title>\n";
-	this->_stream << "\t\t<style type=\"text/css\">\n";
-	this->_stream << "\t\t\t.status-success {font-weight: bold;color: #66CC66;}\n";
-	this->_stream << "\t\t\t.status-fail {font-weight: bold;color: #990000;}\n";
-	this->_stream << "\t\t</style>\n";
+	
+	if(this->_pathStylesheet.empty())
+	{
+		this->_stream << "\t\t<style type=\"text/css\">\n";
+		this->_stream << "\t\t\t.status-success {font-weight: bold;color: #66CC66;}\n";
+		this->_stream << "\t\t\t.status-fail {font-weight: bold;color: #990000;}\n";
+		this->_stream << "\t\t</style>\n";
+	}
+	else{
+		this->_stream << "<link rel=\"stylesheet\" href=\"" << this->_pathStylesheet << "\" type=\"text/css\"/>\n";
+	}
+	
 	this->_stream << "\t</head>\n";
 	this->_stream << "\t<body>\n";
+	this->_stream << "\t\t<h1>" << this->_title << "</h1>\n";
 }
 
 /**
@@ -134,13 +147,13 @@ void HtmlOutputter::_writeResultList(void)
 	
 	this->_writeResultListHeader();
 	
-	this->_stream << "<tbody>";
+	this->_stream << "\t\t\t<tbody>\n";
 	
 	for(CppUnit::TestResultCollector::Tests::iterator it=listTests.begin();it != listTests.end();++it){
 		this->_writeResultListItem((*it), (countTestFailures == 0 || this->_isInFailureList((*it))));
 	}
 	
-	this->_stream << "</tbody>";
+	this->_stream << "\t\t\t</tbody>\n";
 	
 	this->_writeResultListFooter();
 	

@@ -20,6 +20,7 @@
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		CppUnitHtmlOutputterMain.cpp
  * @version 	1.0.0 18-Jul-13
+ * @version		1.1.0 25-Jul-13
  * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 #include <stdlib.h>
@@ -40,7 +41,11 @@ int main(void)
 	std::ofstream outputStream("TestResult.html", std::ofstream::out);
 	CppUnit::TextTestRunner runner;
 	
-	runner.setOutputter(new HtmlOutputter(&runner.result(), outputStream, "Example Test Suite"));
+	HtmlOutputter* outputter = new HtmlOutputter(&runner.result(), outputStream, "Example Test Suite");
+	
+	outputter->setStylesheetPath("Resource/Style.css");
+	
+	runner.setOutputter(outputter);
 	runner.addTest(ExampleTestSuite::suite());
 	runner.run();
 
