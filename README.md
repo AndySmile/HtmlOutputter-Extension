@@ -1,7 +1,7 @@
 HtmlOutputter-Extension v1.1.0
 ==============================
 
-!(Example Output)[Resource/Images/Output-Example.jpg]
+![Example Output](http://andysmiles4games.com/GitHub/Images/Output-Example.jpg)
 
 ## Description
 This is an extension for the CppUnit library. It allows you to write your test resuls into a nice HTML file.
@@ -11,8 +11,8 @@ It's based on the CppUnit v1.12.1, so you have to install it first before you're
 within your project. You'll find it here: http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
 
 ## Change Log
-v1.1.0
-	- Added new to be able to assign a particular path to an extern stylesheet
+### v1.1.0
+	- Added new method to be able to assign a particular path to an extern stylesheet
 
 ## License
 
