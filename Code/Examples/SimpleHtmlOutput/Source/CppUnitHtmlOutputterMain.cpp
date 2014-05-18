@@ -1,7 +1,7 @@
 /**
- * HtmlOutputter - Test Case Application As An Example For The HTML Outputter Module.
+ * SimpleHtmlOutputExample - Test Case Application As An Example For The HTML Outputter Module.
  *
- * Copyright (C) 2013 Andy Liebke
+ * Copyright (C) 2013-2014 Andy Liebke
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,17 +18,21 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @author		Andy Liebke<coding@andysmiles4games.com>
- * @file		CppUnitHtmlOutputterMain.cpp
+ * @file		Source/CppUnitHtmlOutputterMain.cpp
  * @version 	1.0.0 18-Jul-13
  * @version		1.1.0 25-Jul-13
- * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @version		1.2.0 07-Sep-13
+ * @version		1.2.1 25-Feb-14
+ * @copyright	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
-#include <HtmlOutputter.h>
+#include <SimpleCppUnitExtension/SimpleCppUnitExtension.h>
+#include <cppunit/TestResult.h>
 #include <cppunit/ui/text/TestRunner.h>
 #include <ExampleTestSuite.h>
+
 
 /**
  * Performs this application as start point.
@@ -38,18 +42,19 @@
  */
 int main(void)
 {
-	std::ofstream outputStream("TestResult.html", std::ofstream::out);
 	CppUnit::TextTestRunner runner;
 	
-	HtmlOutputter* outputter = new HtmlOutputter(&runner.result(), outputStream, "Example Test Suite");
+	SimpleCppUnitExtension::ProfilerListener* listener = new SimpleCppUnitExtension::ProfilerListener();
 	
-	outputter->setStylesheetPath("Resource/Style.css");
+	runner.eventManager().addListener(listener);
+	
+	SimpleCppUnitExtension::HtmlOutputter* outputter = new SimpleCppUnitExtension::HtmlOutputter(&runner.result(), "NewHtmlTestOutput.html", "Example Test Suite");
+	
+	outputter->setProfilerListener(listener);
 	
 	runner.setOutputter(outputter);
 	runner.addTest(ExampleTestSuite::suite());
 	runner.run();
-
-	outputStream.close();
 	
 	return EXIT_SUCCESS;
 }

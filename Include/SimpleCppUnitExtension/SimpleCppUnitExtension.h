@@ -1,10 +1,9 @@
 /**
- * ExampleTestSuite - Example Test Suite Module.
+ * SimpleCppUnitExtension - Main Library Header.
  *
- * This is a pretty simple test suite, that includes just a view of totally useless test cases,
- * to test and demonstrate the HtmlOutputter in action.
+ * LICENSE:
  *
- * Copyright (C) 2013 Andy Liebke
+ * Copyright (C) 2013-2014 Andy Liebke
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,24 +20,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @author		Andy Liebke<coding@andysmiles4games.com>
- * @file		ExampleTestSuite.cpp
- * @version 	1.0.0 18-Jul-13
- * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @file		Include/SimpleCppUnitExtension/SimpleCppUnitExtension.h
+ * @version 	1.0.0 25-Feb-14
+ * @copyright	Copyright (c) 2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
-#include <ExampleTestSuite.h>
 
-/**
- * Adds two numbers as a test case.
- */
-void ExampleTestSuite::addNumbersTest(void)
-{
-	CPPUNIT_ASSERT(1 + 1 == 2);
-}
+#ifndef __SIMPLE_CPPUNIT_EXTENSION_H__
+#define __SIMPLE_CPPUNIT_EXTENSION_H__
 
-/**
- * Adds two numbers and validate them in a wrong way to get a failure test case.
- */
-void ExampleTestSuite::failThisTest(void)
-{
-	CPPUNIT_ASSERT(1 + 2 == 2);
-}
+#define SIMPLECPPUNITEXTENSION_VERSION "1.2.0"
+#define SIMPLECPPUNITEXTENSION_VERSION_MAJOR 1
+#define SIMPLECPPUNITEXTENSION_VERSION_MINOR 2
+#define SIMPLECPPUNITEXTENSION_VERSION_PATCH 0
+
+#include <SimpleCppUnitExtension/ProfilerListener.h>
+#include <SimpleCppUnitExtension/HtmlOutputter.h>
+
+#endif

@@ -1,10 +1,10 @@
 /**
- * ExampleTestSuite - Example Test Suite Module.
+ * SimpleHtmlOutputExample - Example Test Suite Module.
  *
  * This is a pretty simple test suite, that includes just a view of totally useless test cases,
  * to test and demonstrate the HtmlOutputter in action.
  *
- * Copyright (C) 2013 Andy Liebke
+ * Copyright (C) 2013-2014 Andy Liebke
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,9 +21,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @author		Andy Liebke<coding@andysmiles4games.com>
- * @file		ExampleTestSuite.h
+ * @file		Source/ExampleTestSuite.h
  * @version 	1.0.0 18-Jul-13
- * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @copyright	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 #ifndef __EXAMPLE_TEST_SUITE_H__
 #define __EXAMPLE_TEST_SUITE_H__

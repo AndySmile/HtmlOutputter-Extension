@@ -5,7 +5,7 @@
 #  *	
 #  *	The MIT License (MIT)
 #  *
-#  *	Copyright (c) 2013 by Andy Liebke. All rights reserved.
+#  *	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved.
 #  *
 #  *	Permission is hereby granted, free of charge, to any person obtaining a copy
 #  * 	of this software and associated documentation files (the "Software"), to deal
@@ -29,35 +29,37 @@
 #  * @version 	1.0.0 01-Jul-13
 #  * @version	1.1.0 06-Jul-13
 #  * @version	1.1.1 07-Jul-13
-#  * @copyright	Copyright (c) 2013 by Andy Liebke. All rights reserved. (http://www.andysmiles4games.com)
+#  * @version	1.1.2 25-Feb-14
+#  * @copyright	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved. (http://www.andysmiles4games.com)
 #  */
 
-APP_TITLE = CppUnitHtmlOutputter
-LIST_OBJECTS = 	Build/CppUnitHtmlOutputterMain.o \
-				Build/HtmlOutputter.o \
-				Build/ExampleTestSuite.o
+APP_TITLE = SimpleHtmlOutputExample
+LIST_OBJECTS = 	Tmp/CppUnitHtmlOutputterMain.o \
+				Tmp/ExampleTestSuite.o
 
 DEBUG_SETTINGS =  -g -D_DEBUG
-COMMON_SETTINGS = $(DEBUG_SETTINGS) -Weffc++ -Wall -pedantic-errors -ansi -std=c++98 -I Source/
+COMMON_SETTINGS = $(DEBUG_SETTINGS) -Weffc++ -Wall -pedantic-errors -ansi -std=c++98 -I ./Source/ -I ./../../../Include/
 
 .PHONY: build
 build: check-directories build-executable
 	
 .PHONY: check-directories
 check-directories:
-	mkdir -p ./Build
+	mkdir -p ./Tmp
+	cp ./../../../Lib/libSimpleCppUnitExtension.a ./libSimpleCppUnitExtension.a
 		
 .PHONY: build-executable
 build-executable: $(LIST_OBJECTS) 
-	g++ -lcppunit -o $(APP_TITLE) $^
+	g++ -lcppunit -lSimpleCppUnitExtension -L./../../../Lib -o $(APP_TITLE) $^
 	
-Build/%.o: Source/%.cpp
+Tmp/%.o: Source/%.cpp
 	g++ $(COMMON_SETTINGS) -c $^ -o $@ 
 
 .PHONY: clean
 clean:
-	rm -f Build/*
+	rm -rf Tmp/
 	rm -f $(APP_TITLE)
+	rm -f ./libSimpleCppUnitExtension.a
 	
 .PHONY: leakcheck
 leakcheck:
