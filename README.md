@@ -1,8 +1,6 @@
 SimpleCppUnitExtension v1.2.0
 ==============================
 
-![Example Output](http://andysmiles4games.com/GitHub/Images/Output-Example.jpg)
-
 ## Description
 This is an extension for the CppUnit library. It adds a new output option for CppUnit tests in HTML format.
 In addition, it also includes a test case profiler to be able to measure performance time for each test case. Because its developed
