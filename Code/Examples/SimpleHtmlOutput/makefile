@@ -60,6 +60,7 @@ clean:
 	rm -rf Tmp/
 	rm -f $(APP_TITLE)
 	rm -f ./libSimpleCppUnitExtension.a
+	rm -f ./NewHtmlTestOutput.html
 	
 .PHONY: leakcheck
 leakcheck:

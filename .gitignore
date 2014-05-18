@@ -6,8 +6,9 @@
 *.a
 *.lib
 
-# exclude example output
+# exclude example files including example executables
 *.html
+SimpleHtmlOutputExample
 
 # exclude documentation directory
 Doc/

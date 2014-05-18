@@ -15,6 +15,19 @@ within your project. You'll find it here: http://sourceforge.net/apps/mediawiki/
 ## Platform
 Currently this extension library was developed and tested on Mac OS X Lion (10.7) but Windows will be available as well soon.
 
+## Install Mac OS X
+
+- After downloading the source, go to directory in your console: /path/of/your/install/SimpleCppUnitExtension/Code/Library/
+- enter "make build"
+- go back to root directory of this project: /path/of/your/install/SimpleCppUnitExtension/
+- you'll see two new folders were created: "Include" and "Lib"
+	- "Lib" includes your compiled library files you'll need to use this library within your project
+	- "Include" includes all header files of this library which are need to be able to compile your project with this library
+- configure your IDE/compiler that they know those two directories and you're ready to go
+
+## Example
+Within "Code" folder, you gonna find an example how to add this new output extension to your existing CppUnit code.
+
 ## Change Log
 ### v1.2.0
 	- Converted this project into a library to make it easier to add it to an existing test case project
