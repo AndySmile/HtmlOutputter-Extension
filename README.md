@@ -1,4 +1,4 @@
-HtmlOutputter-Extension v1.2.0
+SimpleCppUnitExtension v1.2.0
 ==============================
 
 ![Example Output](http://andysmiles4games.com/GitHub/Images/Output-Example.jpg)
@@ -11,6 +11,10 @@ After small extensions in your existing code it is already ready to go.
 
 It's based on the CppUnit v1.12.1, so you have to install it first before you're able to use this extension
 within your project. You'll find it here: http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
+
+## Supported Features
+- Html Outputter for all test case results
+- Profiler to measure time consumption of each test case
 
 ## Platform
 Currently this extension library was developed and tested on Mac OS X Lion (10.7) but Windows will be available as well soon.
