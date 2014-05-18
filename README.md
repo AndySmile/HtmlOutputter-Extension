@@ -4,9 +4,9 @@ HtmlOutputter-Extension v1.2.0
 ![Example Output](http://andysmiles4games.com/GitHub/Images/Output-Example.jpg)
 
 ## Description
-This is an extension for the CppUnit library. It allows you to write your test results into a nice HTML file.
-As addition it also includes a test case profile to be able to measure performing time for each test case. To add
-this extension pretty simple and quick it was build as a library. Just compile it and add it to your project.
+This is an extension for the CppUnit library. It adds a new output option for CppUnit tests in HTML format.
+In addition, it also includes a test case profiler to be able to measure performance time for each test case. Because its developed
+as a library, you can add it pretty quick to your existing test cases. Just compile it and add it to your project.
 After small extensions in your existing code it is already ready to go.
 
 It's based on the CppUnit v1.12.1, so you have to install it first before you're able to use this extension

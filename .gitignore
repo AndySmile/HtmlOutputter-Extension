@@ -1,4 +1,13 @@
+# exclude OS related files
 .DS_Store
+
+# exclude compiler output
 *.o
+*.a
+*.lib
+
+# exclude example output
 *.html
+
+# exclude documentation directory
 Doc/
