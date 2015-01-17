@@ -3,7 +3,7 @@
  *
  * LICENSE:
  *
- * Copyright (C) 2013-2014 Andy Liebke
+ * Copyright (C) 2013-2015 Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -22,7 +22,7 @@
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		Include/SimpleCppUnitExtension/SimpleCppUnitExtension.h
  * @version 	1.0.0 25-Feb-14
- * @copyright	Copyright (c) 2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @copyright	Copyright (c) 2014-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 
 #ifndef __SIMPLE_CPPUNIT_EXTENSION_H__

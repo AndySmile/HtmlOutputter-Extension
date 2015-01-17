@@ -1,5 +1,4 @@
-SimpleCppUnitExtension v1.2.0
-==============================
+#SimpleCppUnitExtension v1.2.0
 
 ## Description
 This is an extension for the CppUnit library. It adds a new output option for CppUnit tests in HTML format.
@@ -28,7 +27,7 @@ Currently this extension library was developed and tested on Mac OS X Lion (10.7
 - configure your IDE/compiler that they know those two directories and you're ready to go
 
 ## Example
-Within "Code" folder, you gonna find an example how to add this new output extension to your existing CppUnit code.
+Within "Code" folder, there is an example how to add this new output extension to your existing CppUnit code.
 
 ## Change Log
 ### v1.2.0

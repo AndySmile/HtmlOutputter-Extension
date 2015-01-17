@@ -3,7 +3,7 @@
  *
  * LICENSE:
  *
- * Copyright (C) 2013-2014 Andy Liebke
+ * Copyright (C) 2013-2015 Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,11 +21,8 @@
  *
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		Include/SimpleCppUnitExtension/ProfilerListener.h
- * @version 	1.0.0 07-Sep-13
- * @version		1.1.0 08-Sep-13
- * @version		1.2.0 15-Sep-13
  * @version		1.2.1 25-Feb-14
- * @copyright	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @copyright	Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 #ifndef __SIMPLE_CPPUNIT_EXTENSION_PROFILER_LISTENER_H__
 #define __SIMPLE_CPPUNIT_EXTENSION_PROFILER_LISTENER_H__

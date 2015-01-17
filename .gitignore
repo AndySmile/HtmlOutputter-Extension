@@ -1,14 +1,35 @@
-# exclude OS related files
+##
+# SimpleCppUnitExtension - GIT Ignore File.
+#
+# @author		Andy Liebke<coding@andysmiles4games.com>
+# @version		1.1.0 17-Jan-15
+# @copyright	Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+#
+
+##
+# Exclude OS related files.
+#
 .DS_Store
 
-# exclude compiler output
+##
+# Exclude compiler output.
+#
 *.o
 *.a
 *.lib
 
-# exclude example files including example executables
+##
+# Exclude example files including example executables.
+#
 *.html
 SimpleHtmlOutputExample
 
-# exclude documentation directory
+##
+# Exclude documentation directory.
+#
 Doc/
+
+##
+# Exclude generated directories.
+#
+Include/
