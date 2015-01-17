@@ -1,10 +1,10 @@
 /**
- * SimpleHtmlOutputExample - Example Test Suite Module.
+ * SimpleCppUnitExtension - Example Test Suite Module.
  *
  * This is a pretty simple test suite, that includes just a view of totally useless test cases,
  * to test and demonstrate the HtmlOutputter in action.
  *
- * Copyright (C) 2013-2014 Andy Liebke
+ * Copyright (C) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -20,10 +20,10 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
- * @author		Andy Liebke<coding@andysmiles4games.com>
- * @file		Source/ExampleTestSuite.cpp
- * @version 	1.0.0 18-Jul-13
- * @copyright	Copyright (c) 2013-2014 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @author      Andy Liebke<coding@andysmiles4games.com>
+ * @file        Source/ExampleTestSuite.cpp
+ * @version     1.0.0 18-Jul-13
+ * @copyright   Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 #include <ExampleTestSuite.h>
 
@@ -32,7 +32,7 @@
  */
 void ExampleTestSuite::addNumbersTest(void)
 {
-	CPPUNIT_ASSERT(1 + 1 == 2);
+    CPPUNIT_ASSERT(1 + 1 == 2);
 }
 
 /**
@@ -40,5 +40,5 @@ void ExampleTestSuite::addNumbersTest(void)
  */
 void ExampleTestSuite::failThisTest(void)
 {
-	CPPUNIT_ASSERT(1 + 2 == 2);
+    CPPUNIT_ASSERT(1 + 2 == 2);
 }

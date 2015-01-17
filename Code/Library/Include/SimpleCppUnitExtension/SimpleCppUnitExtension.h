@@ -19,19 +19,19 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
- * @author		Andy Liebke<coding@andysmiles4games.com>
- * @file		Include/SimpleCppUnitExtension/SimpleCppUnitExtension.h
- * @version 	1.0.0 25-Feb-14
- * @copyright	Copyright (c) 2014-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+ * @author      Andy Liebke<coding@andysmiles4games.com>
+ * @file        Include/SimpleCppUnitExtension/SimpleCppUnitExtension.h
+ * @version     1.0.1 17-Jan-15
+ * @copyright   Copyright (c) 2014-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 
 #ifndef __SIMPLE_CPPUNIT_EXTENSION_H__
 #define __SIMPLE_CPPUNIT_EXTENSION_H__
 
-#define SIMPLECPPUNITEXTENSION_VERSION "1.2.0"
+#define SIMPLECPPUNITEXTENSION_VERSION "1.2.1"
 #define SIMPLECPPUNITEXTENSION_VERSION_MAJOR 1
 #define SIMPLECPPUNITEXTENSION_VERSION_MINOR 2
-#define SIMPLECPPUNITEXTENSION_VERSION_PATCH 0
+#define SIMPLECPPUNITEXTENSION_VERSION_PATCH 1
 
 #include <SimpleCppUnitExtension/ProfilerListener.h>
 #include <SimpleCppUnitExtension/HtmlOutputter.h>
