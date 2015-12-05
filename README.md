@@ -1,4 +1,4 @@
-#SimpleCppUnitExtension v1.2.0
+#SimpleCppUnitExtension v1.2.1
 
 ## Description
 This is an extension for the CppUnit library. It adds a new output option for CppUnit tests in HTML format.

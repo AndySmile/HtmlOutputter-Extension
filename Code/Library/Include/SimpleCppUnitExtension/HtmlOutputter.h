@@ -23,7 +23,7 @@
  * 
  * @author		Andy Liebke<coding@andysmiles4games.com>
  * @file		Include/SimpleCppUnitExtension/HtmlOutputter.h
- * @version		1.4.0 15-Sep-13
+ * @version		1.4.1 05-Dec-15
  * @copyright	Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * @see			http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
  */
@@ -54,7 +54,7 @@ namespace SimpleCppUnitExtension
 			 * @param filename	- string including name of HTML output file
 			 * @param title		- string including title for HTML output file
 			 */
-			HtmlOutputter(CppUnit::TestResultCollector* result, const std::string filename="TestResult.html", const std::string title="CppUnit HTML Outputter");
+			HtmlOutputter(CppUnit::TestResultCollector* result, const std::string filename = "TestResult.html", const std::string title = "CppUnit HTML Outputter");
 		
 			/**
 			 * Creates a new instance of this class.

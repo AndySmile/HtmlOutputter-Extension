@@ -21,17 +21,17 @@
  *
  * @author      Andy Liebke<coding@andysmiles4games.com>
  * @file        Include/SimpleCppUnitExtension/SimpleCppUnitExtension.h
- * @version     1.0.1 17-Jan-15
+ * @version     1.0.2 05-Dec-15
  * @copyright   Copyright (c) 2014-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  */
 
 #ifndef __SIMPLE_CPPUNIT_EXTENSION_H__
 #define __SIMPLE_CPPUNIT_EXTENSION_H__
 
-#define SIMPLECPPUNITEXTENSION_VERSION "1.2.1"
+#define SIMPLECPPUNITEXTENSION_VERSION "1.2.2"
 #define SIMPLECPPUNITEXTENSION_VERSION_MAJOR 1
 #define SIMPLECPPUNITEXTENSION_VERSION_MINOR 2
-#define SIMPLECPPUNITEXTENSION_VERSION_PATCH 1
+#define SIMPLECPPUNITEXTENSION_VERSION_PATCH 2
 
 #include <SimpleCppUnitExtension/ProfilerListener.h>
 #include <SimpleCppUnitExtension/HtmlOutputter.h>

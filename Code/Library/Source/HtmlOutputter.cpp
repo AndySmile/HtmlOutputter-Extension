@@ -23,7 +23,7 @@
  *
  * @author      Andy Liebke<coding@andysmiles4games.com>
  * @file        Source/HtmlOutputter.cpp
- * @version     1.4.1 17-Jan-15
+ * @version     1.4.2 05-Dec-15
  * @copyright   Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
  * @see         http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page
  */
@@ -114,7 +114,7 @@ namespace SimpleCppUnitExtension
      */
     HtmlOutputter::~HtmlOutputter(void)
     {
-        if(this->_fileStream.is_open()){
+        if (this->_fileStream.is_open()) {
             this->_fileStream.close();
         }
     }
@@ -149,14 +149,12 @@ namespace SimpleCppUnitExtension
         this->_stream << "\t<head>\n";
         this->_stream << "\t\t<title>" << this->_title << "</title>\n";
     
-        if (this->_pathStylesheet.empty())
-        {
+        if (this->_pathStylesheet.empty()) {
             this->_stream << "\t\t<style type=\"text/css\">\n";
             this->_stream << "\t\t\t.status-success {font-weight: bold;color: #" << this->_fontColorSuccess << ";}\n";
             this->_stream << "\t\t\t.status-fail {font-weight: bold;color: #" << this->_fontColorFail << ";}\n";
             this->_stream << "\t\t</style>\n";
-        }
-        else {
+        } else {
             this->_stream << "<link rel=\"stylesheet\" href=\"" << this->_pathStylesheet << "\" type=\"text/css\"/>\n";
         }
     
@@ -189,7 +187,7 @@ namespace SimpleCppUnitExtension
     
         this->_stream << "\t\t\t<tbody>\n";
     
-        for (CppUnit::TestResultCollector::Tests::iterator it=listTests.begin(); it != listTests.end(); ++it) {
+        for (CppUnit::TestResultCollector::Tests::iterator it = listTests.begin(); it != listTests.end(); ++it) {
             this->_writeResultListItem((*it), (countTestFailures == 0 || this->_isInFailureList((*it))));
         }
     
@@ -250,8 +248,7 @@ namespace SimpleCppUnitExtension
         this->_stream << "Fails: " << this->_result->testFailuresTotal();
         this->_stream << " Success: " << (this->_result->runTests() -  this->_result->testFailuresTotal());
     
-        if (this->_profilerListener != NULL)
-        {
+        if (this->_profilerListener != NULL) {
             this->_stream.precision(3);
             this->_stream << "Total Measured Time: " << this->_profilerListener->getTotalTime();
         }
@@ -265,7 +262,7 @@ namespace SimpleCppUnitExtension
      * Checks a particular test if it's within the failure test list.
      *
      * @param test - test that should be tested if it's within the failure list
-     * @return boolean with value true in case that the given test is within failure list,
+     * @return boolean - true in case that the given test is within failure list,
      *          otherwise false
      */
     bool HtmlOutputter::_isInFailureList(CppUnit::Test* test)
@@ -273,10 +270,8 @@ namespace SimpleCppUnitExtension
         CppUnit::TestResultCollector::TestFailures listFailures = this->_result->failures();
         bool success = true;
     
-        for (CppUnit::TestResultCollector::TestFailures::iterator it=listFailures.begin(); it != listFailures.end(); ++it)
-        {
-            if (test == (*it)->failedTest())
-            {
+        for (CppUnit::TestResultCollector::TestFailures::iterator it = listFailures.begin(); it != listFailures.end(); ++it) {
+            if (test == (*it)->failedTest()) {
                 success = false;
                 break;
             }
