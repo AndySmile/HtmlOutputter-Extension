@@ -5,7 +5,7 @@
 #	
 #   The MIT License (MIT)
 #
-#   Copyright (c) 2013-2014 by Andy Liebke. All rights reserved.
+#   Copyright (c) 2013-2016 by Andy Liebke. All rights reserved.
 #
 #   Permission is hereby granted, free of charge, to any person obtaining a copy
 #   of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@
 #
 # @author	 Andy Liebke<coding@andysmiles4games.com>
 # @version	 1.7.1 25-Feb-14
-# @copyright Copyright (c) 2013-2015 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
+# @copyright Copyright (c) 2013-2016 by Andy Liebke. All rights reserved. (http://andysmiles4games.com)
 #
 
 LIB_TITLE = SimpleCppUnitExtension
